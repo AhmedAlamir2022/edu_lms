@@ -264,13 +264,13 @@
 
                             </div>
 
-                            {{-- <div class="dropdown-menu-column">
+                            <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.course-levels.*']) }}"
                                     href="{{ route('admin.course-levels.index') }}">
                                     Course Levels
                                 </a>
 
-                            </div> --}}
+                            </div>
 
                             {{-- <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.reviews.*']) }}"

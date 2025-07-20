@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Admin\Auth\NewPasswordController;
 use App\Http\Controllers\Admin\CourseLanguageController;
+use App\Http\Controllers\Admin\CourseLevelController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\InstructorRequestController;
 use App\Http\Controllers\Admin\ProfileUpdateController;
@@ -66,7 +67,7 @@ Route::group(["middleware" => "auth:admin", "prefix" => "admin", "as" => "admin.
     Route::resource('course-languages', CourseLanguageController::class);
 
     /** Course Levels Routes */
-    // Route::resource('course-levels', CourseLevelController::class);
+    Route::resource('course-levels', CourseLevelController::class);
 
     /** Course Categories Routes */
     // Route::resource('course-categories', CourseCategoryController::class);
