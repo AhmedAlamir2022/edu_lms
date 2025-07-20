@@ -212,7 +212,7 @@
                         </span>
                     </a>
                 </li>
-                {{-- <li class="nav-item {{ sidebarItemActive(['admin.instructor-requests.index']) }}">
+                <li class="nav-item {{ sidebarItemActive(['admin.instructor-requests.index']) }}">
                     <a class="nav-link" href="{{ route('admin.instructor-requests.index') }}">
                         <span class="nav-link-icon d-md-none d-lg-inline-block">
                             <i class="ti ti-help-hexagon"></i>
@@ -221,7 +221,7 @@
                             Instructor Requests
                         </span>
                     </a>
-                </li> --}}
+                </li>
 
                 {{-- <li
                     class="nav-item dropdown {{ sidebarItemActive(['admin.courses.*', 'admin.course-categories.*', 'admin.course-languages.*', 'admin.course-levels.*', 'admin.reviews.*']) }}">
