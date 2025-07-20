@@ -28,7 +28,15 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        notyf()->success('Login Successfully.');
+
+        if($request->user()->role == 'student') {
+            return redirect()->intended(route('student.dashboard', absolute: false));
+        }elseif($request->user()->role == 'instructor') {
+            return redirect()->intended(route('instructor.dashboard', absolute: false));
+        }
+
+        return abort(404);
     }
 
     /**
@@ -41,6 +49,8 @@ class AuthenticatedSessionController extends Controller
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();
+
+        notyf()->success('Logout Successfully.');
 
         return redirect('/');
     }

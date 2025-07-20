@@ -1,4 +1,4 @@
-Dashboard
+
 @extends('admin.layouts.master')
 
 @section('content')
@@ -416,7 +416,7 @@ Dashboard
                     },
                     {
                         label: 'Order Count',
-                        
+
                         backgroundColor: 'rgba(255, 99, 132, 0.6)',
                         borderColor: 'rgba(255, 99, 132, 1)',
                         type: 'line',

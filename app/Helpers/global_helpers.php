@@ -12,3 +12,9 @@ if (!function_exists('sidebarItemActive')) {
         }
     }
 }
+
+if(!function_exists('user')) {
+    function user() {
+        return auth('web')->user();
+    }
+}

@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Admin\Auth\NewPasswordController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ProfileUpdateController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(["middleware" => "guest:admin", "prefix" => "admin", "as" => "admin."], function () {
@@ -16,14 +17,14 @@ Route::group(["middleware" => "guest:admin", "prefix" => "admin", "as" => "admin
     Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])
         ->name('password.request');
 
-    // Route::post('forgot-password', [PasswordResetLinkController::class, 'store'])
-    //     ->name('password.email');
+    Route::post('forgot-password', [PasswordResetLinkController::class, 'store'])
+        ->name('password.email');
 
-    // Route::get('reset-password/{token}', [NewPasswordController::class, 'create'])
-    //     ->name('password.reset');
+    Route::get('reset-password/{token}', [NewPasswordController::class, 'create'])
+        ->name('password.reset');
 
-    // Route::post('reset-password', [NewPasswordController::class, 'store'])
-    //     ->name('password.store');
+    Route::post('reset-password', [NewPasswordController::class, 'store'])
+        ->name('password.store');
 });
 
 Route::group(["middleware" => "auth:admin", "prefix" => "admin", "as" => "admin."], function () {

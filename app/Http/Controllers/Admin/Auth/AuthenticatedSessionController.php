@@ -28,14 +28,9 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        $notification = array(
-            'message' => 'Login Successfully',
-            'alert-type' => 'info'
-        );
+        notyf()->success('Login Successfully.');
 
-        return redirect()->intended(route('admin.dashboard', absolute: false))->with($notification);
-
-        toastr()->success('Login successfully!');
+        return redirect()->intended(route('admin.dashboard', absolute: false));
     }
 
     /**
@@ -49,8 +44,9 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
+        notyf()->success('Logout Successfully.');
+
         return redirect('/admin/login');
 
-        toastr()->error('Logout successfully!');
     }
 }

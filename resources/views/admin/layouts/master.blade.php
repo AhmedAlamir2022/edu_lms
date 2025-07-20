@@ -20,7 +20,6 @@
     <!-- CSS files -->
     <link href="{{ asset('admin/assets/dist/css/tabler.min.css?1692870487') }}" rel="stylesheet" />
     <link href="{{ asset('admin/assets/dist/css/demo.min.css?1692870487') }}" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
 
     <style>
         @import url('https://rsms.me/inter/inter.css');
@@ -160,35 +159,12 @@
     <!-- Tabler Core -->
     <script src="{{ asset('admin/assets/dist/js/tabler.min.js?1692870487') }}" defer></script>
     <script src="{{ asset('admin/assets/dist/js/demo.min.js?1692870487') }}" defer></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-    <script>
-        @if (Session::has('message'))
-            var type = "{{ Session::get('alert-type', 'info') }}"
-            switch (type) {
-                case 'info':
-                    toastr.info(" {{ Session::get('message') }} ");
-                    break;
-
-                case 'success':
-                    toastr.success(" {{ Session::get('message') }} ");
-                    break;
-
-                case 'warning':
-                    toastr.warning(" {{ Session::get('message') }} ");
-                    break;
-
-                case 'error':
-                    toastr.error(" {{ Session::get('message') }} ");
-                    break;
-            }
-        @endif
-    </script>
 
     <script>
         @if ($errors->any())
             @foreach ($errors->all() as $error)
-                toastr.error("{{ $error }}")
+                notyf()->error("{{ $error }}");
             @endforeach
         @endif
     </script>
