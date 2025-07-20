@@ -201,6 +201,7 @@
         </div>
         <div class="collapse navbar-collapse" id="sidebar-menu">
             <ul class="navbar-nav pt-lg-3">
+                {{-- admin dashboard --}}
                 <li class="nav-item {{ sidebarItemActive(['admin.dashboard']) }}">
                     <a class="nav-link" href="{{ route('admin.dashboard') }}">
                         <span
@@ -212,6 +213,8 @@
                         </span>
                     </a>
                 </li>
+
+                {{-- instructor request --}}
                 <li class="nav-item {{ sidebarItemActive(['admin.instructor-requests.index']) }}">
                     <a class="nav-link" href="{{ route('admin.instructor-requests.index') }}">
                         <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -223,7 +226,8 @@
                     </a>
                 </li>
 
-                {{-- <li
+                {{-- course management --}}
+                <li
                     class="nav-item dropdown {{ sidebarItemActive(['admin.courses.*', 'admin.course-categories.*', 'admin.course-languages.*', 'admin.course-levels.*', 'admin.reviews.*']) }}">
                     <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown"
                         data-bs-auto-close="false" role="button" aria-expanded="false">
@@ -238,20 +242,20 @@
 
                     <div class="dropdown-menu">
                         <div class="dropdown-menu-columns">
-                            <div class="dropdown-menu-column">
+                            {{-- <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.courses.*']) }}"
                                     href="{{ route('admin.courses.index') }}">
                                     Courses
                                 </a>
 
-                            </div>
-                            <div class="dropdown-menu-column">
+                            </div> --}}
+                            {{-- <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.course-categories.*']) }}"
                                     href="{{ route('admin.course-categories.index') }}">
                                     Course Categories
                                 </a>
 
-                            </div>
+                            </div> --}}
                             <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.course-languages.*']) }}"
                                     href="{{ route('admin.course-languages.index') }}">
@@ -260,24 +264,24 @@
 
                             </div>
 
-                            <div class="dropdown-menu-column">
+                            {{-- <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.course-levels.*']) }}"
                                     href="{{ route('admin.course-levels.index') }}">
                                     Course Levels
                                 </a>
 
-                            </div>
+                            </div> --}}
 
-                            <div class="dropdown-menu-column">
+                            {{-- <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.reviews.*']) }}"
                                     href="{{ route('admin.reviews.index') }}">
                                     Course Reviews
                                 </a>
 
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
-                </li> --}}
+                </li>
 
                 {{-- <li class="nav-item {{ sidebarItemActive(['admin.certificate-builder.*']) }}">
                     <a class="nav-link" href="{{ route('admin.certificate-builder.index') }}">
