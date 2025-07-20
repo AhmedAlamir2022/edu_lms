@@ -6,6 +6,7 @@
  * ------------------------------------------------------
  */
 
+use App\Http\Controllers\Frontend\ProfileController;
 use App\Http\Controllers\Frontend\StudentDashboardController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,10 +16,10 @@ Route::group(['middleware' => ['auth:web', 'verified', 'check_role:student'], 'p
     // Route::post('/become-instructor/{user}', [StudentDashboardController::class, 'becomeInstructorUpdate'])->name('become-instructor.update');
 
     /** Profile Routes */
-    // Route::get('profile', [ProfileController::class, 'index'])->name('profile.index');
-    // Route::post('profile/update', [ProfileController::class, 'profileUpdate'])->name('profile.update');
-    // Route::post('profile/update-password', [ProfileController::class, 'updatePassword'])->name('profile.update-password');
-    // Route::post('profile/update-social', [ProfileController::class, 'updateSocial'])->name('profile.update-social');
+    Route::get('profile', [ProfileController::class, 'index'])->name('profile.index');
+    Route::post('profile/update', [ProfileController::class, 'profileUpdate'])->name('profile.update');
+    Route::post('profile/update-password', [ProfileController::class, 'updatePassword'])->name('profile.update-password');
+    Route::post('profile/update-social', [ProfileController::class, 'updateSocial'])->name('profile.update-social');
 
     /** Enroll Courses Routes */
     // Route::get('enrolled-courses', [EnrolledCourseController::class, 'index'])->name('enrolled-courses.index');

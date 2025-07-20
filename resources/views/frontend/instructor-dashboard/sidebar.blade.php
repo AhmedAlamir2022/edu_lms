@@ -22,7 +22,7 @@
                 </a>
             </li>
             <li>
-                <a href=""
+                <a href="{{ route('instructor.profile.index') }}"
                     class="{{ sidebarItemActive(['instructor.profile.index']) }}">
                     <div class="img">
                         <img src="{{ asset('frontend/assets/images/dash_icon_8.png') }}" alt="icon"
