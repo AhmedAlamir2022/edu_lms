@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\CoursePageController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\ProfileController;
@@ -11,9 +12,9 @@ Route::get('/courses/{slug}', [CoursePageController::class, 'show'])->name('cour
 
 
 /** Cart routes */
-// Route::get('cart', [CartController::class, 'index'])->name('cart.index')->middleware('auth');
-// Route::post('add-to-cart/{course}', [CartController::class, 'addToCart'])->name('add-to-cart')->middleware('auth');
-// Route::get('remove-from-cart/{id}', [CartController::class, 'removeFromCart'])->name('remove-from-cart')->middleware('auth');
+Route::get('cart', [CartController::class, 'index'])->name('cart.index')->middleware('auth');
+Route::post('add-to-cart/{course}', [CartController::class, 'addToCart'])->name('add-to-cart')->middleware('auth');
+Route::get('remove-from-cart/{id}', [CartController::class, 'removeFromCart'])->name('remove-from-cart')->middleware('auth');
 
 /** Payment Routes */
 // Route::get('checkout', CheckoutController::class)->name('checkout.index');

@@ -1,6 +1,9 @@
 <?php
 
 /** Sidebar Item Active */
+
+use App\Models\Cart;
+
 if (!function_exists('sidebarItemActive')) {
     function sidebarItemActive(array $routes)
     {
@@ -26,4 +29,30 @@ if(!function_exists('convertMinutesToHours')) {
         return sprintf('%dh %02dm', $hours, $minutes); // Returns format : 1h 30m
     }
 
+}
+
+/** calculate cart total */
+if(!function_exists('cartCount')) {
+    function cartCount() {
+        return Cart::where('user_id', user()?->id)->count();
+    }
+}
+
+/** calculate cart total */
+if(!function_exists('cartTotal')) {
+    function cartTotal() {
+        $total = 0;
+
+        $cart = Cart::where('user_id', user()->id)->get();
+
+        foreach($cart as $item) {
+            if($item->course->discount > 0) {
+                $total += $item->course->discount;
+            }else {
+                $total += $item->course->price;
+            }
+        }
+
+        return $total;
+    }
 }

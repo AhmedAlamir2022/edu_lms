@@ -333,7 +333,7 @@
                                         <div class="select_rating d-flex flex-wrap">Your Rating:
                                             <ul id="starRating" data-stars="5"></ul>
                                         </div>
-                                        <form action="{{ route('review.store') }}" method="POST">
+                                        {{-- <form action="{{ route('review.store') }}" method="POST">
                                             @csrf
                                             <div class="row">
                                                 <input type="hidden" name="rating" value="" id="rating">
@@ -345,7 +345,7 @@
                                                     <button type="submit" class="common_btn">Submit Now</button>
                                                 </div>
                                             </div>
-                                        </form>
+                                        </form> --}}
                                     </div>
                                 @else
                                     <div class="alert alert-info mt-3 text-center" role="alert">Please <a
