@@ -1,8 +1,8 @@
-   {{-- @php
-       $topbar = \App\Models\TopBar::first();
+   @php
+       //    $topbar = \App\Models\TopBar::first();
        $categories = \App\Models\CourseCategory::whereNull('parent_id')->where('status', 1)->get();
-       $customPages = \App\Models\CustomPage::where('status', 1)->where('show_at_nav', 1)->get();
-   @endphp --}}
+       //    $customPages = \App\Models\CustomPage::where('status', 1)->where('show_at_nav', 1)->get();
+   @endphp
    <!--===========================
         HEADER START
     ============================-->
@@ -50,7 +50,7 @@
                </div>
                Category
                <ul>
-                   {{-- @foreach ($categories as $category)
+                   @foreach ($categories as $category)
                        <li>
                            <a href="{{ route('courses.index', ['main_category' => $category->slug]) }}">
                                <span>
@@ -69,7 +69,7 @@
                                </ul>
                            @endif
                        </li>
-                   @endforeach --}}
+                   @endforeach
 
                </ul>
            </div>
@@ -77,9 +77,9 @@
                <li class="nav-item">
                    <a class="nav-link active" href="{{ url('/') }}">Home</a>
                </li>
-               {{-- <li class="nav-item">
+               <li class="nav-item">
                    <a class="nav-link" href="{{ route('courses.index') }}">Courses</a>
-               </li> --}}
+               </li>
                {{-- <li class="nav-item">
                    <a class="nav-link" href="{{ route('about.index') }}">About</a>
                </li> --}}
@@ -129,11 +129,11 @@
        </div>
    </nav>
    <div class="wsus__menu_3_search_area">
-       {{-- <form action="{{ route('courses.index') }}">
+       <form action="{{ route('courses.index') }}">
            <input type="text" placeholder="Search School, Online....." name="search">
            <button class="common_btn" type="submit">Search</button>
            <span class="close_search"><i class="far fa-times"></i></span>
-       </form> --}}
+       </form>
    </div>
    <!--===========================
         MAIN MENU 3 END
@@ -166,10 +166,10 @@
                    <li><a href="{{ route('login') }}"><i class="far fa-user"></i></a></li>
                </ul>
 
-               {{-- <form class="mobile_menu_search" action="{{ route('courses.index') }}">
+               <form class="mobile_menu_search" action="{{ route('courses.index') }}">
                    <input type="text" placeholder="Search" name="search">
                    <button type="submit"><i class="far fa-search"></i></button>
-               </form> --}}
+               </form>
 
                <div class="mobile_menu_item_area">
                    <nav>
@@ -178,8 +178,8 @@
                                data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
                                aria-selected="true">menu</button>
                            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
-                               data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
-                               aria-selected="false">Categories</button>
+                               data-bs-target="#nav-profile" type="button" role="tab"
+                               aria-controls="nav-profile" aria-selected="false">Categories</button>
                        </div>
                    </nav>
                    <div class="tab-content" id="nav-tabContent">
@@ -189,9 +189,9 @@
                                <li class="nav-item">
                                    <a class="nav-link active" href="{{ url('/') }}">Home</a>
                                </li>
-                               {{-- <li class="nav-item">
+                               <li class="nav-item">
                                    <a class="nav-link" href="{{ route('courses.index') }}">Courses</a>
-                               </li> --}}
+                               </li>
                                {{-- <li class="nav-item">
                                    <a class="nav-link" href="{{ route('about.index') }}">About</a>
                                </li> --}}
@@ -213,7 +213,7 @@
                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
                            tabindex="0">
                            <ul class="main_mobile_menu">
-                               {{-- @foreach ($categories as $category)
+                               @foreach ($categories as $category)
                                    <li class="mobile_dropdown">
                                        <a href="javascript:;">
                                            <span>
@@ -233,14 +233,7 @@
                                            </ul>
                                        @endif
                                    </li>
-                               @endforeach --}}
-
-
-
-
-
-
-
+                               @endforeach
                            </ul>
                        </div>
                    </div>
