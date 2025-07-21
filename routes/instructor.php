@@ -10,6 +10,7 @@
 use App\Http\Controllers\Frontend\CourseContentController;
 use App\Http\Controllers\Frontend\CourseController;
 use App\Http\Controllers\Frontend\InstructorDashboardController;
+use App\Http\Controllers\Frontend\OrderController;
 use App\Http\Controllers\Frontend\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -54,7 +55,7 @@ Route::group(['middleware' => ['auth:web', 'verified', 'check_role:instructor'],
 
 
     /** Orders Routes */
-    // Route::get('orders', [OrderController::class, 'index'])->name('orders.index');
+    Route::get('orders', [OrderController::class, 'index'])->name('orders.index');
 
     /** Withdrawal routes */
     // Route::get('withdrawals', [WithdrawController::class, 'index'])->name('withdraw.index');

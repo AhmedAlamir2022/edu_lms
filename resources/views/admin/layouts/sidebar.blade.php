@@ -296,7 +296,7 @@
                     </a>
                 </li> --}}
 
-                {{-- <li class="nav-item {{ sidebarItemActive(['admin.orders.*']) }}">
+                <li class="nav-item {{ sidebarItemActive(['admin.orders.*']) }}">
                     <a class="nav-link" href="{{ route('admin.orders.index') }}">
 
                         <span
@@ -307,7 +307,7 @@
                             Orders
                         </span>
                     </a>
-                </li> --}}
+                </li>
 
                 {{-- <li class="nav-item {{ sidebarItemActive(['admin.withdraw-request.*']) }}">
                     <a class="nav-link" href="{{ route('admin.withdraw-request.index') }}">

@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\CourseLevelController;
 use App\Http\Controllers\Admin\CourseSubCategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\InstructorRequestController;
+use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\PaymentSettingController;
 use App\Http\Controllers\Admin\ProfileUpdateController;
 use Illuminate\Support\Facades\Route;
@@ -117,8 +118,8 @@ Route::group(["middleware" => "auth:admin", "prefix" => "admin", "as" => "admin.
 
 
     /** Order Routes */
-    // Route::get('orders', [OrderController::class, 'index'])->name('orders.index');
-    // Route::get('orders/{order}', [OrderController::class, 'show'])->name('orders.show');
+    Route::get('orders', [OrderController::class, 'index'])->name('orders.index');
+    Route::get('orders/{order}', [OrderController::class, 'show'])->name('orders.show');
 
 
     /** Payment setting routes */

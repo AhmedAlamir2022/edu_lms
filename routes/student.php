@@ -8,6 +8,7 @@
 
 use App\Http\Controllers\Frontend\ProfileController;
 use App\Http\Controllers\Frontend\StudentDashboardController;
+use App\Http\Controllers\Frontend\StudentOrderController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => ['auth:web', 'verified', 'check_role:student'], 'prefix' => 'student', 'as' => 'student.'], function () {
@@ -36,6 +37,6 @@ Route::group(['middleware' => ['auth:web', 'verified', 'check_role:student'], 'p
     // Route::get('review', [StudentDashboardController::class, 'review'])->name('review.index');
     // Route::delete('review/{id}', [StudentDashboardController::class, 'reviewDestroy'])->name('review.destroy');
 
-    // Route::get('orders', [StudentOrderController::class, 'index'])->name('orders.index');
-    // Route::get('orders/{order}', [StudentOrderController::class, 'show'])->name('orders.show');
+    Route::get('orders', [StudentOrderController::class, 'index'])->name('orders.index');
+    Route::get('orders/{order}', [StudentOrderController::class, 'show'])->name('orders.show');
 });
