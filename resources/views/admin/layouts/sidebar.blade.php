@@ -242,13 +242,13 @@
 
                     <div class="dropdown-menu">
                         <div class="dropdown-menu-columns">
-                            {{-- <div class="dropdown-menu-column">
+                            <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.courses.*']) }}"
                                     href="{{ route('admin.courses.index') }}">
                                     Courses
                                 </a>
 
-                            </div> --}}
+                            </div>
                             <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.course-categories.*']) }}"
                                     href="{{ route('admin.course-categories.index') }}">

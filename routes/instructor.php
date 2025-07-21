@@ -33,6 +33,7 @@ Route::group(['middleware' => ['auth:web', 'verified', 'check_role:instructor'],
     Route::post('courses/create', [CourseController::class, 'storeBasicInfo'])->name('courses.sore-basic-info');
     Route::get('courses/{id}/edit', [CourseController::class, 'edit'])->name('courses.edit');
     Route::post('courses/update', [CourseController::class, 'update'])->name('courses.update');
+    Route::delete('courses/delete/{id}', [CourseController::class, 'destroy'])->name('courses.destroy');
 
     Route::get('course-content/{course}/create-chapter', [CourseContentController::class,'createChapterModal'])->name('course-content.create-chapter');
     Route::post('course-content/{course}/create-chapter', [CourseContentController::class,'storeChapter'])->name('course-content.store-chapter');

@@ -10,6 +10,7 @@ use App\Models\CourseChapter;
 use App\Models\CourseLanguage;
 use App\Models\CourseLevel;
 use App\Traits\FileUpload;
+use Exception;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -193,6 +194,36 @@ class CourseController extends Controller
                     'redirect' => route('instructor.courses.index')
                 ]);
                 break;
+        }
+    }
+
+
+    public function destroy($id)
+    {
+        try {
+            $course = Course::findOrFail($id);
+
+            // حذف الدروس المرتبطة بالفصول المرتبطة بالكورس
+            foreach ($course->chapters as $chapter) {
+                $chapter->lessons()->delete();
+            }
+
+            // حذف الفصول المرتبطة بالكورس
+            $course->chapters()->delete();
+
+            // حذف الكورس نفسه
+            $course->delete();
+
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Course deleted successfully.'
+            ]);
+        } catch (\Exception $e) {
+            logger("Course Language Error >> " . $e);
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Something went wrong!'
+            ], 500);
         }
     }
 }
