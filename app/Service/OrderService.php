@@ -3,6 +3,7 @@
 namespace App\Service;
 
 use App\Models\Cart;
+use App\Models\Enrollment;
 use App\Models\Order;
 use App\Models\OrderItem;
 
@@ -42,11 +43,11 @@ class OrderService
                 $orderItem->save();
 
                 /** store enrollment */
-                // $enrollment = new Enrollment();
-                // $enrollment->user_id = $buyer_id;
-                // $enrollment->course_id = $item->course->id;
-                // $enrollment->instructor_id = $item->course->instructor_id;
-                // $enrollment->save();
+                $enrollment = new Enrollment();
+                $enrollment->user_id = $buyer_id;
+                $enrollment->course_id = $item->course->id;
+                $enrollment->instructor_id = $item->course->instructor_id;
+                $enrollment->save();
 
                 /** add commission to instructor wallet */
                 $instructorWallet = $item->course->instructor;

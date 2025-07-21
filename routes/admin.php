@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\InstructorRequestController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\PaymentSettingController;
 use App\Http\Controllers\Admin\ProfileUpdateController;
+use App\Http\Controllers\Admin\SettingController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(["middleware" => "guest:admin", "prefix" => "admin", "as" => "admin."], function () {
@@ -128,17 +129,17 @@ Route::group(["middleware" => "auth:admin", "prefix" => "admin", "as" => "admin.
     Route::post('stripe-setting', [PaymentSettingController::class, 'stripeSetting'])->name('stripe-setting.update');
 
     /** Site Settings Route */
-    // Route::get('settings', [SettingController::class, 'index'])->name('settings.index');
-    // Route::post('general-settings', [SettingController::class, 'updateGeneralSettings'])->name('general-settings.update');
+    Route::get('settings', [SettingController::class, 'index'])->name('settings.index');
+    Route::post('general-settings', [SettingController::class, 'updateGeneralSettings'])->name('general-settings.update');
 
-    // Route::get('commission-settings', [SettingController::class, 'commissionSettingIndex'])->name('commission-settings.index');
-    // Route::post('commission-settings', [SettingController::class, 'updateCommissionSetting'])->name('commission-settings.update');
+    Route::get('commission-settings', [SettingController::class, 'commissionSettingIndex'])->name('commission-settings.index');
+    Route::post('commission-settings', [SettingController::class, 'updateCommissionSetting'])->name('commission-settings.update');
 
-    // Route::get('smtp-settings', [SettingController::class, 'smtpSetting'])->name('smtp-settings.index');
-    // Route::post('smtp-settings', [SettingController::class, 'updateSmtpSetting'])->name('smtp-settings.update');
+    Route::get('smtp-settings', [SettingController::class, 'smtpSetting'])->name('smtp-settings.index');
+    Route::post('smtp-settings', [SettingController::class, 'updateSmtpSetting'])->name('smtp-settings.update');
 
-    // Route::get('logo-settings', [SettingController::class, 'logoSettingIndex'])->name('logo-settings.index');
-    // Route::post('logo-settings', [SettingController::class, 'updateLogoSetting'])->name('logo-settings.update');
+    Route::get('logo-settings', [SettingController::class, 'logoSettingIndex'])->name('logo-settings.index');
+    Route::post('logo-settings', [SettingController::class, 'updateLogoSetting'])->name('logo-settings.update');
     /** Payout Gateway Routes */
     // Route::resource('payout-gateway', PayoutGatewayController::class);
 

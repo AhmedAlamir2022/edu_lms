@@ -568,7 +568,7 @@
                     </a>
                 </li>
 
-                {{-- <li class="nav-item ">
+                <li class="nav-item ">
                     <a class="nav-link {{ sidebarItemActive(['admin.settings.*']) }}"
                         href="{{ route('admin.settings.index') }}">
                         <span
@@ -579,7 +579,7 @@
                             Settings
                         </span>
                     </a>
-                </li> --}}
+                </li>
 
                 {{-- <li class="nav-item ">
                     <a class="nav-link {{ sidebarItemActive(['admin.database-clear.*']) }}"
