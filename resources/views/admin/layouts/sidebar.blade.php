@@ -555,7 +555,7 @@
                     </a>
                 </li> --}}
 
-                {{-- <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link {{ sidebarItemActive(['admin.payment-setting.*']) }}"
                         href="{{ route('admin.payment-setting.index') }}">
                         <span
@@ -566,7 +566,7 @@
                             Payment Settings
                         </span>
                     </a>
-                </li> --}}
+                </li>
 
                 {{-- <li class="nav-item ">
                     <a class="nav-link {{ sidebarItemActive(['admin.settings.*']) }}"
