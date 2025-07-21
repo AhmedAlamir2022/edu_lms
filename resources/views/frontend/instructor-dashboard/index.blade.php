@@ -63,19 +63,19 @@
                         <div class="col-xl-4 col-sm-6 wow fadeInUp">
                             <div class="wsus__dash_earning">
                                 <h6>Pending Courses</h6>
-                                <h3>5</h3>
+                                <h3>{{ $pendingCourses }}</h3>
                             </div>
                         </div>
                         <div class="col-xl-4 col-sm-6 wow fadeInUp">
                             <div class="wsus__dash_earning">
                                 <h6>Approved Courses</h6>
-                                <h3>5</h3>
+                                <h3>{{ $approvedCourses }}</h3>
                             </div>
                         </div>
                         <div class="col-xl-4 col-sm-6 wow fadeInUp">
                             <div class="wsus__dash_earning">
                                 <h6>Rejected Courses</h6>
-                                <h3>5</h3>
+                                <h3>{{ $rejectedCourses }}</h3>
                             </div>
                         </div>
                     </div>
