@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutUsSectionController;
 use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Admin\Auth\NewPasswordController;
@@ -165,7 +166,7 @@ Route::group(["middleware" => "auth:admin", "prefix" => "admin", "as" => "admin.
     Route::resource('feature', FeatureController::class);
 
     /** Feature Routes */
-    // Route::resource('about-section', AboutUsSectionController::class);
+    Route::resource('about-section', AboutUsSectionController::class);
 
 
     /** Latest Courses Routes */
