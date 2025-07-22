@@ -393,13 +393,13 @@
                                 </a>
 
                             </div>
-                            {{-- <div class="dropdown-menu-column">
+                            <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.feature.*']) }}"
                                     href="{{ route('admin.feature.index') }}">
                                     Features
                                 </a>
 
-                            </div> --}}
+                            </div>
                             {{-- <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.about-section.*']) }}"
                                     href="{{ route('admin.about-section.index') }}">

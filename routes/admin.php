@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\CourseLanguageController;
 use App\Http\Controllers\Admin\CourseLevelController;
 use App\Http\Controllers\Admin\CourseSubCategoryController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\FeatureController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\InstructorRequestController;
 use App\Http\Controllers\Admin\OrderController;
@@ -161,7 +162,7 @@ Route::group(["middleware" => "auth:admin", "prefix" => "admin", "as" => "admin.
     Route::resource('hero', HeroController::class);
 
     /** Feature Routes */
-    // Route::resource('feature', FeatureController::class);
+    Route::resource('feature', FeatureController::class);
 
     /** Feature Routes */
     // Route::resource('about-section', AboutUsSectionController::class);
