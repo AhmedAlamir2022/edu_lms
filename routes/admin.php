@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Admin\Auth\NewPasswordController;
+use App\Http\Controllers\Admin\CertificateBuilderController;
 use App\Http\Controllers\Admin\CourseCategoryController;
 use App\Http\Controllers\Admin\CourseContentController;
 use App\Http\Controllers\Admin\CourseController;
@@ -151,9 +152,9 @@ Route::group(["middleware" => "auth:admin", "prefix" => "admin", "as" => "admin.
     Route::post('withdraw-requests/{withdraw}/status', [WithdrawRequestController::class, 'updateStatus'])->name('withdraw-request.status.update');
 
     /** Certificate Builder Routes */
-    // Route::get('certificate-builder', [CertificateBuilderController::class, 'index'])->name('certificate-builder.index');
-    // Route::post('certificate-builder', [CertificateBuilderController::class, 'update'])->name('certificate-builder.update');
-    // Route::post('certificate-item', [CertificateBuilderController::class, 'itemUpdate'])->name('certificate-item.update');
+    Route::get('certificate-builder', [CertificateBuilderController::class, 'index'])->name('certificate-builder.index');
+    Route::post('certificate-builder', [CertificateBuilderController::class, 'update'])->name('certificate-builder.update');
+    Route::post('certificate-item', [CertificateBuilderController::class, 'itemUpdate'])->name('certificate-item.update');
 
     /** Hero Routes */
     // Route::resource('hero', HeroController::class);

@@ -283,7 +283,7 @@
                     </div>
                 </li>
 
-                {{-- <li class="nav-item {{ sidebarItemActive(['admin.certificate-builder.*']) }}">
+                <li class="nav-item {{ sidebarItemActive(['admin.certificate-builder.*']) }}">
                     <a class="nav-link" href="{{ route('admin.certificate-builder.index') }}">
 
                         <span
@@ -294,7 +294,7 @@
                             Certificate Builder
                         </span>
                     </a>
-                </li> --}}
+                </li>
 
                 <li class="nav-item {{ sidebarItemActive(['admin.orders.*']) }}">
                     <a class="nav-link" href="{{ route('admin.orders.index') }}">

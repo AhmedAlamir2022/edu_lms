@@ -6,6 +6,7 @@
  * ------------------------------------------------------
  */
 
+use App\Http\Controllers\Frontend\CertificateController;
 use App\Http\Controllers\Frontend\EnrolledCourseController;
 use App\Http\Controllers\Frontend\ProfileController;
 use App\Http\Controllers\Frontend\StudentDashboardController;
@@ -32,7 +33,7 @@ Route::group(['middleware' => ['auth:web', 'verified', 'check_role:student'], 'p
     Route::get('file-download/{id}', [EnrolledCourseController::class, 'fileDownload'])->name('file-download');
 
     /** Certificate Routes */
-    // Route::get('certificate/{course}/download', [CertificateController::class, 'download'])->name('certificate.download');
+    Route::get('certificate/{course}/download', [CertificateController::class, 'download'])->name('certificate.download');
 
     /** Review Routes */
     // Route::get('review', [StudentDashboardController::class, 'review'])->name('review.index');
