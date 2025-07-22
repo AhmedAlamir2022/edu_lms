@@ -407,12 +407,12 @@
                                 </a>
 
                             </div>
-                            {{-- <div class="dropdown-menu-column">
+                            <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.latest-courses-section.*']) }}"
                                     href="{{ route('admin.latest-courses-section.index') }}">
                                     Latest Courses
                                 </a>
-                            </div> --}}
+                            </div>
 
                             {{-- <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.become-instructor-section.*']) }}"

@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FeatureController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\InstructorRequestController;
+use App\Http\Controllers\Admin\LatestCourseSectionController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\PaymentSettingController;
 use App\Http\Controllers\Admin\PayoutGatewayController;
@@ -170,7 +171,7 @@ Route::group(["middleware" => "auth:admin", "prefix" => "admin", "as" => "admin.
 
 
     /** Latest Courses Routes */
-    // Route::resource('latest-courses-section', LatestCourseSectionController::class);
+    Route::resource('latest-courses-section', LatestCourseSectionController::class);
 
     /** Become Instructor Section Routes */
     // Route::resource('become-instructor-section', BecomeInstructorSectionController::class);
