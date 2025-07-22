@@ -33,7 +33,7 @@
             </li>
 
             <li>
-                <a href=""
+                <a href="{{ route('student.enrolled-courses.index') }}"
                     class="{{ sidebarItemActive(['student.enrolled-courses.index']) }}">
                     <div class="img">
                         <img src="{{ asset('frontend/assets/images/dash_icon_8.png') }}" alt="icon"

@@ -6,6 +6,7 @@
  * ------------------------------------------------------
  */
 
+use App\Http\Controllers\Frontend\EnrolledCourseController;
 use App\Http\Controllers\Frontend\ProfileController;
 use App\Http\Controllers\Frontend\StudentDashboardController;
 use App\Http\Controllers\Frontend\StudentOrderController;
@@ -23,12 +24,12 @@ Route::group(['middleware' => ['auth:web', 'verified', 'check_role:student'], 'p
     Route::post('profile/update-social', [ProfileController::class, 'updateSocial'])->name('profile.update-social');
 
     /** Enroll Courses Routes */
-    // Route::get('enrolled-courses', [EnrolledCourseController::class, 'index'])->name('enrolled-courses.index');
-    // Route::get('course-player/{slug}', [EnrolledCourseController::class, 'payerIndex'])->name('course-player.index');
-    // Route::get('get-lesson-content', [EnrolledCourseController::class, 'getLessonContent'])->name('get-lesson-content');
-    // Route::post('update-watch-history', [EnrolledCourseController::class, 'updateWatchHistory'])->name('update-watch-history');
-    // Route::post('update-lesson-completion', [EnrolledCourseController::class, 'updateLessonCompletion'])->name('update-lesson-completion');
-    // Route::get('file-download/{id}', [EnrolledCourseController::class, 'fileDownload'])->name('file-download');
+    Route::get('enrolled-courses', [EnrolledCourseController::class, 'index'])->name('enrolled-courses.index');
+    Route::get('course-player/{slug}', [EnrolledCourseController::class, 'payerIndex'])->name('course-player.index');
+    Route::get('get-lesson-content', [EnrolledCourseController::class, 'getLessonContent'])->name('get-lesson-content');
+    Route::post('update-watch-history', [EnrolledCourseController::class, 'updateWatchHistory'])->name('update-watch-history');
+    Route::post('update-lesson-completion', [EnrolledCourseController::class, 'updateLessonCompletion'])->name('update-lesson-completion');
+    Route::get('file-download/{id}', [EnrolledCourseController::class, 'fileDownload'])->name('file-download');
 
     /** Certificate Routes */
     // Route::get('certificate/{course}/download', [CertificateController::class, 'download'])->name('certificate.download');
