@@ -370,7 +370,7 @@
                     </a>
                 </li>
 
-                {{-- <li
+                <li
                     class="nav-item dropdown {{ sidebarItemActive(['admin.hero.*', 'admin.feature.*', 'admin.counter-section.*', 'admin.about-section.*', 'admin.testimonial-section.*', 'admin.video-section.*', 'admin.featured-instructor-section.*', 'admin.brand-section.*', 'admin.latest-courses-section.*', 'admin.become-instructor-section.*']) }}">
                     <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown"
                         data-bs-auto-close="false" role="button" aria-expanded="false">
@@ -393,70 +393,70 @@
                                 </a>
 
                             </div>
-                            <div class="dropdown-menu-column">
+                            {{-- <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.feature.*']) }}"
                                     href="{{ route('admin.feature.index') }}">
                                     Features
                                 </a>
 
-                            </div>
-                            <div class="dropdown-menu-column">
+                            </div> --}}
+                            {{-- <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.about-section.*']) }}"
                                     href="{{ route('admin.about-section.index') }}">
                                     About Us
                                 </a>
 
-                            </div>
-                            <div class="dropdown-menu-column">
+                            </div> --}}
+                            {{-- <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.latest-courses-section.*']) }}"
                                     href="{{ route('admin.latest-courses-section.index') }}">
                                     Latest Courses
                                 </a>
-                            </div>
+                            </div> --}}
 
-                            <div class="dropdown-menu-column">
+                            {{-- <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.become-instructor-section.*']) }}"
                                     href="{{ route('admin.become-instructor-section.index') }}">
                                     Become Instructor Banner
                                 </a>
-                            </div>
+                            </div> --}}
 
-                            <div class="dropdown-menu-column">
+                            {{-- <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.video-section.*']) }} "
                                     href="{{ route('admin.video-section.index') }}">
                                     Video
                                 </a>
-                            </div>
-                            <div class="dropdown-menu-column">
+                            </div> --}}
+                            {{-- <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.brand-section.*']) }}"
                                     href="{{ route('admin.brand-section.index') }}">
                                     Brand
                                 </a>
-                            </div>
+                            </div> --}}
 
-                            <div class="dropdown-menu-column">
+                            {{-- <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.featured-instructor-section.*']) }}"
                                     href="{{ route('admin.featured-instructor-section.index') }}">
                                     Featured Instructor
                                 </a>
-                            </div>
+                            </div> --}}
 
-                            <div class="dropdown-menu-column">
+                            {{-- <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.testimonial-section.*']) }}"
                                     href="{{ route('admin.testimonial-section.index') }}">
                                     Testimonial
                                 </a>
-                            </div>
-                            <div class="dropdown-menu-column">
+                            </div> --}}
+                            {{-- <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.counter-section.*']) }}"
                                     href="{{ route('admin.counter-section.index') }}">
                                     Counter
                                 </a>
-                            </div>
+                            </div> --}}
 
                         </div>
                     </div>
-                </li> --}}
+                </li>
 
                 {{-- <li class="nav-item dropdown {{ sidebarItemActive(['admin.contact.*', 'admin.contact-setting.*']) }}">
                     <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown"
