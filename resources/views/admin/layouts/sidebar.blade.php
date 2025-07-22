@@ -309,7 +309,7 @@
                     </a>
                 </li>
 
-                {{-- <li class="nav-item {{ sidebarItemActive(['admin.withdraw-request.*']) }}">
+                <li class="nav-item {{ sidebarItemActive(['admin.withdraw-request.*']) }}">
                     <a class="nav-link" href="{{ route('admin.withdraw-request.index') }}">
 
                         <span
@@ -320,7 +320,7 @@
                             Payout Requests
                         </span>
                     </a>
-                </li> --}}
+                </li>
 
                 {{-- <li class="nav-item dropdown {{ sidebarItemActive(['admin.blogs.*', 'admin.blog-categories.*']) }}">
                     <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown"
@@ -357,7 +357,7 @@
                     </div>
                 </li> --}}
 
-                {{-- <li class="nav-item {{ sidebarItemActive(['admin.payout-gateway.*']) }}">
+                <li class="nav-item {{ sidebarItemActive(['admin.payout-gateway.*']) }}">
                     <a class="nav-link" href="{{ route('admin.payout-gateway.index') }}">
 
                         <span
@@ -368,7 +368,7 @@
                             Payout Gateways
                         </span>
                     </a>
-                </li> --}}
+                </li>
 
                 {{-- <li
                     class="nav-item dropdown {{ sidebarItemActive(['admin.hero.*', 'admin.feature.*', 'admin.counter-section.*', 'admin.about-section.*', 'admin.testimonial-section.*', 'admin.video-section.*', 'admin.featured-instructor-section.*', 'admin.brand-section.*', 'admin.latest-courses-section.*', 'admin.become-instructor-section.*']) }}">

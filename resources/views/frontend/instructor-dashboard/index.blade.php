@@ -91,7 +91,7 @@
 
                             </thead>
                             <tbody>
-                                {{-- @forelse($orderItems as $orderItem)
+                                @forelse($orderItems as $orderItem)
                                     <tr>
                                         <td>{{ $orderItem->course->title }}</td>
                                         <td>{{ $orderItem->order->customer->name }}</td>
@@ -106,7 +106,7 @@
                                     <tr>
                                         <td>No Data Found</td>
                                     </tr>
-                                @endforelse --}}
+                                @endforelse
                             </tbody>
                         </table>
                     </div>

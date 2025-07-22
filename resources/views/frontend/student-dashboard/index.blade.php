@@ -70,19 +70,19 @@
                         <div class="col-xl-4 col-sm-6 wow fadeInUp">
                             <div class="wsus__dash_earning">
                                 <h6>Enrolled Courses</h6>
-                                <h3>5</h3>
+                                <h3>{{ $userCourses }}</h3>
                             </div>
                         </div>
                         <div class="col-xl-4 col-sm-6 wow fadeInUp">
                             <div class="wsus__dash_earning">
                                 <h6>Total Reviews</h6>
-                                <h3>5</h3>
+                                <h3>kjjk</h3>
                             </div>
                         </div>
                         <div class="col-xl-4 col-sm-6 wow fadeInUp">
                             <div class="wsus__dash_earning">
                                 <h6>Total Orders</h6>
-                                <h3>5</h3>
+                                <h3>{{ $orderCount }}</h3>
                             </div>
                         </div>
                     </div>
@@ -100,13 +100,13 @@
 
                             </thead>
                             <tbody>
-                                {{-- @forelse($orders as $order)
+                                @forelse($orders as $order)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $order->invoice_id }}</td>
                                         <td>{{ $order->total_amount }} {{ $order->currency }}</td>
                                         <td><span class="badge bg-success text-green-fg">{{ $order->status }}</span></td>
-                                        <td><a href="">view</a></td>
+                                        <td><a href="{{ route('student.orders.show', $order->id) }}">view</a></td>
 
                                     </tr>
                                 @empty
@@ -114,7 +114,7 @@
                                     <tr>
                                         <td>No Data Found</td>
                                     </tr>
-                                @endforelse --}}
+                                @endforelse
                             </tbody>
                         </table>
                     </div>

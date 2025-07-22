@@ -12,6 +12,7 @@ use App\Http\Controllers\Frontend\CourseController;
 use App\Http\Controllers\Frontend\InstructorDashboardController;
 use App\Http\Controllers\Frontend\OrderController;
 use App\Http\Controllers\Frontend\ProfileController;
+use App\Http\Controllers\Frontend\WithdrawController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => ['auth:web', 'verified', 'check_role:instructor'], 'prefix' => 'instructor', 'as' =>
@@ -58,21 +59,9 @@ Route::group(['middleware' => ['auth:web', 'verified', 'check_role:instructor'],
     Route::get('orders', [OrderController::class, 'index'])->name('orders.index');
 
     /** Withdrawal routes */
-    // Route::get('withdrawals', [WithdrawController::class, 'index'])->name('withdraw.index');
-    // Route::get('withdrawals/request-payout', [
-    //     WithdrawController::class,
-    //     'requestPayoutIndex'
-    // ])->name('withdraw.request-payout');
-    // Route::post('withdrawals/request-payout', [
-    //     WithdrawController::class,
-    //     'requestPayout'
-    // ])->name('withdraw.request-payout.create');
-
-
-
-
-
-
+    Route::get('withdrawals', [WithdrawController::class, 'index'])->name('withdraw.index');
+    Route::get('withdrawals/request-payout', [WithdrawController::class,'requestPayoutIndex'])->name('withdraw.request-payout');
+    Route::post('withdrawals/request-payout', [WithdrawController::class,'requestPayout'])->name('withdraw.request-payout.create');
 
     /** lfm Routes */
     Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
