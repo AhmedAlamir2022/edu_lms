@@ -201,6 +201,7 @@
         </div>
         <div class="collapse navbar-collapse" id="sidebar-menu">
             <ul class="navbar-nav pt-lg-3">
+
                 {{-- admin dashboard --}}
                 <li class="nav-item {{ sidebarItemActive(['admin.dashboard']) }}">
                     <a class="nav-link" href="{{ route('admin.dashboard') }}">
@@ -283,6 +284,7 @@
                     </div>
                 </li>
 
+                {{-- Certificate Builder --}}
                 <li class="nav-item {{ sidebarItemActive(['admin.certificate-builder.*']) }}">
                     <a class="nav-link" href="{{ route('admin.certificate-builder.index') }}">
 
@@ -296,6 +298,7 @@
                     </a>
                 </li>
 
+                {{-- Manage Orders --}}
                 <li class="nav-item {{ sidebarItemActive(['admin.orders.*']) }}">
                     <a class="nav-link" href="{{ route('admin.orders.index') }}">
 
@@ -309,6 +312,7 @@
                     </a>
                 </li>
 
+                {{-- Payout Requests --}}
                 <li class="nav-item {{ sidebarItemActive(['admin.withdraw-request.*']) }}">
                     <a class="nav-link" href="{{ route('admin.withdraw-request.index') }}">
 
@@ -357,6 +361,7 @@
                     </div>
                 </li> --}}
 
+                {{-- Payout Gateways --}}
                 <li class="nav-item {{ sidebarItemActive(['admin.payout-gateway.*']) }}">
                     <a class="nav-link" href="{{ route('admin.payout-gateway.index') }}">
 
@@ -370,6 +375,7 @@
                     </a>
                 </li>
 
+                {{-- manage sections --}}
                 <li
                     class="nav-item dropdown {{ sidebarItemActive(['admin.hero.*', 'admin.feature.*', 'admin.counter-section.*', 'admin.about-section.*', 'admin.testimonial-section.*', 'admin.video-section.*', 'admin.featured-instructor-section.*', 'admin.brand-section.*', 'admin.latest-courses-section.*', 'admin.become-instructor-section.*']) }}">
                     <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown"
@@ -458,6 +464,7 @@
                     </div>
                 </li>
 
+                {{-- Contact --}}
                 <li class="nav-item dropdown {{ sidebarItemActive(['admin.contact.*', 'admin.contact-setting.*']) }}">
                     <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown"
                         data-bs-auto-close="false" role="button" aria-expanded="false">
@@ -491,7 +498,7 @@
                     </div>
                 </li>
 
-                {{-- <li
+                <li
                     class="nav-item dropdown {{ sidebarItemActive(['admin.top-bar.*', 'admin.footer.*', 'admin.footer-column-one.*', 'admin.footer-column-two.*', 'admin.social-links.*']) }}">
                     <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown"
                         data-bs-auto-close="false" role="button" aria-expanded="false">
@@ -539,7 +546,7 @@
 
                         </div>
                     </div>
-                </li> --}}
+                </li>
 
                 {{-- <li class="nav-item">
                     <a class="nav-link {{ sidebarItemActive(['admin.custom-page.*']) }}"

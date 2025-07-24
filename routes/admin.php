@@ -19,6 +19,9 @@ use App\Http\Controllers\Admin\CourseSubCategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FeatureController;
 use App\Http\Controllers\Admin\FeaturedInstructorController;
+use App\Http\Controllers\Admin\FooterColumnOneController;
+use App\Http\Controllers\Admin\FooterColumnTwoController;
+use App\Http\Controllers\Admin\FooterController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\InstructorRequestController;
 use App\Http\Controllers\Admin\LatestCourseSectionController;
@@ -28,7 +31,9 @@ use App\Http\Controllers\Admin\PayoutGatewayController;
 use App\Http\Controllers\Admin\ProfileUpdateController;
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\SocialLinkController;
 use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\Admin\TopBarController;
 use App\Http\Controllers\Admin\VideoSectionController;
 use App\Http\Controllers\Admin\WithdrawRequestController;
 use Illuminate\Support\Facades\Route;
@@ -212,19 +217,19 @@ Route::group(["middleware" => "auth:admin", "prefix" => "admin", "as" => "admin.
     Route::resource('reviews', ReviewController::class);
 
     /** Top bar routes */
-    // Route::resource('top-bar', TopBarController::class);
+    Route::resource('top-bar', TopBarController::class);
 
     /** Footer routes */
-    // Route::resource('footer', FooterController::class);
+    Route::resource('footer', FooterController::class);
 
     /** Social links routes */
-    // Route::resource('social-links', SocialLinkController::class);
+    Route::resource('social-links', SocialLinkController::class);
 
     /** footer column one routes */
-    // Route::resource('footer-column-one', FooterColumnOneController::class);
+    Route::resource('footer-column-one', FooterColumnOneController::class);
 
     /** footer column one routes */
-    // Route::resource('footer-column-two', FooterColumnTwoController::class);
+    Route::resource('footer-column-two', FooterColumnTwoController::class);
 
     /** footer column one routes */
     // Route::resource('custom-page', CustomPageController::class);

@@ -1,5 +1,5 @@
    @php
-       //    $topbar = \App\Models\TopBar::first();
+       $topbar = \App\Models\TopBar::first();
        $categories = \App\Models\CourseCategory::whereNull('parent_id')->where('status', 1)->get();
        //    $customPages = \App\Models\CustomPage::where('status', 1)->where('show_at_nav', 1)->get();
    @endphp
@@ -10,16 +10,16 @@
        <div class="row">
            <div class="col-xxl-4 col-lg-7 col-md-8 d-none d-md-block">
                <ul class="wsus__header_left d-flex flex-wrap">
-                   {{-- <li><a href="mailto:{{ $topbar?->email }}"><i class="fas fa-envelope"></i> {{ $topbar?->email }}</a>
+                   <li><a href="mailto:{{ $topbar?->email }}"><i class="fas fa-envelope"></i> {{ $topbar?->email }}</a>
                    </li>
                    <li><a href="callto:{{ $topbar?->phone }}"><i class="fas fa-phone-alt"></i> {{ $topbar?->phone }}</a>
-                   </li> --}}
+                   </li>
                </ul>
            </div>
            <div class="col-xxl-5 col-lg-7 d-none d-xxl-block">
                <div class="wsus__header_center">
-                   {{-- <p> <span>{{ $topbar?->offer_name }}</span> {{ $topbar?->offer_short_description }} <a
-                           href="{{ $topbar?->offer_button_url }}">{{ $topbar?->offer_button_text }}</a></p> --}}
+                   <p> <span>{{ $topbar?->offer_name }}</span> {{ $topbar?->offer_short_description }} <a
+                           href="{{ $topbar?->offer_button_url }}">{{ $topbar?->offer_button_text }}</a></p>
                </div>
            </div>
            <div class="col-xxl-3 col-lg-5 col-md-4">
@@ -160,9 +160,9 @@
            <div class="offcanvas-body">
 
                <ul class="mobile_menu_header d-flex flex-wrap">
-                   {{-- <li><a href="{{ route('cart.index') }}"><i class="far fa-shopping-basket"></i> <span
+                   <li><a href="{{ route('cart.index') }}"><i class="far fa-shopping-basket"></i> <span
                                class="cart_count">{{ cartCount() }}</span></a>
-                   </li> --}}
+                   </li>
                    <li><a href="{{ route('login') }}"><i class="far fa-user"></i></a></li>
                </ul>
 
@@ -192,16 +192,16 @@
                                <li class="nav-item">
                                    <a class="nav-link" href="{{ route('courses.index') }}">Courses</a>
                                </li>
-                               {{-- <li class="nav-item">
+                               <li class="nav-item">
                                    <a class="nav-link" href="{{ route('about.index') }}">About</a>
-                               </li> --}}
+                               </li>
                                {{-- <li class="nav-item">
                                    <a class="nav-link" href="{{ route('blog.index') }}">Blogs</a>
                                </li> --}}
 
-                               {{-- <li class="nav-item">
+                               <li class="nav-item">
                                    <a class="nav-link" href="{{ route('contact.index') }}">contact us</a>
-                               </li> --}}
+                               </li>
                                {{-- @foreach ($customPages as $page)
                                    <li class="nav-item">
                                        <a class="nav-link"
