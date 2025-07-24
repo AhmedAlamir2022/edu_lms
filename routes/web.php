@@ -46,7 +46,7 @@ Route::post('contact', [FrontendContactController::class, 'sendMail'])->name('se
 Route::post('review', [CoursePageController::class, 'storeReview'])->name('review.store');
 
 /** Custom page Routes */
-// Route::get('page/{slug}', [FrontendController::class, 'customPage'])->name('custom-page');
+Route::get('page/{slug}', [FrontendController::class, 'customPage'])->name('custom-page');
 
 /** Blog Routes */
 // Route::get('blog', [BlogController::class, 'index'])->name('blog.index');

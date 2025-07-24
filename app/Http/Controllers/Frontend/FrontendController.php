@@ -9,6 +9,7 @@ use App\Models\Brand;
 use App\Models\Counter;
 use App\Models\Course;
 use App\Models\CourseCategory;
+use App\Models\CustomPage;
 use App\Models\Feature;
 use App\Models\FeaturedInstructor;
 use App\Models\Hero;
@@ -60,5 +61,11 @@ class FrontendController extends Controller
         // $blogs = Blog::where('status', 1)->latest()->limit(8)->get();
 
         return view('frontend.pages.about', compact('about', 'counter', 'testimonials'));
+    }
+
+    function customPage(string $slug): View
+    {
+        $page = CustomPage::where('slug', $slug)->where('status', 1)->firstOrFail();
+        return view('frontend.pages.custom-page', compact('page'));
     }
 }

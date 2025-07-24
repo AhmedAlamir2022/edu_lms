@@ -498,6 +498,7 @@
                     </div>
                 </li>
 
+                {{-- Header & Footer --}}
                 <li
                     class="nav-item dropdown {{ sidebarItemActive(['admin.top-bar.*', 'admin.footer.*', 'admin.footer-column-one.*', 'admin.footer-column-two.*', 'admin.social-links.*']) }}">
                     <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown"
@@ -548,7 +549,7 @@
                     </div>
                 </li>
 
-                {{-- <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link {{ sidebarItemActive(['admin.custom-page.*']) }}"
                         href="{{ route('admin.custom-page.index') }}">
 
@@ -560,7 +561,7 @@
                             Custom Pages
                         </span>
                     </a>
-                </li> --}}
+                </li>
 
                 {{-- manage payment settings --}}
                 <li class="nav-item">

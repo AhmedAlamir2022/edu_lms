@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\CourseLanguageController;
 use App\Http\Controllers\Admin\CourseLevelController;
 use App\Http\Controllers\Admin\CourseSubCategoryController;
+use App\Http\Controllers\Admin\CustomPageController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FeatureController;
 use App\Http\Controllers\Admin\FeaturedInstructorController;
@@ -232,7 +233,7 @@ Route::group(["middleware" => "auth:admin", "prefix" => "admin", "as" => "admin.
     Route::resource('footer-column-two', FooterColumnTwoController::class);
 
     /** footer column one routes */
-    // Route::resource('custom-page', CustomPageController::class);
+    Route::resource('custom-page', CustomPageController::class);
 
     /** blog category routes */
     // Route::resource('blog-categories', BlogCategoryController::class);
