@@ -76,7 +76,7 @@
                         <div class="col-xl-4 col-sm-6 wow fadeInUp">
                             <div class="wsus__dash_earning">
                                 <h6>Total Reviews</h6>
-                                <h3>kjjk</h3>
+                                <h3>{{ $reviewCount }}</h3>
                             </div>
                         </div>
                         <div class="col-xl-4 col-sm-6 wow fadeInUp">

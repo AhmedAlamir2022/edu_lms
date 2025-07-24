@@ -176,7 +176,7 @@
                                         <div class="rating_area">
                                             <!-- <a href="#" class="category">Design</a> -->
                                             <p class="rating">
-                                                {{-- @for ($i = 1; $i <= 5; $i++)
+                                                @for ($i = 1; $i <= 5; $i++)
                                                     @if ($i <= $course->reviews()->avg('rating'))
                                                         <i class="fas fa-star"></i>
                                                     @else
@@ -185,7 +185,7 @@
                                                 @endfor
 
                                                 <span>({{ number_format($course->reviews()->avg('rating'), 2) ?? 0 }}
-                                                    Rating)</span> --}}
+                                                    Rating)</span>
                                             </p>
                                         </div>
 
@@ -193,7 +193,7 @@
                                             href="{{ route('courses.show', $course->slug) }}">{{ $course->title }}</a>
                                         <ul>
                                             <li>{{ $course->lessons()->count() }} Lessons</li>
-                                            {{-- <li>{{ $course->enrollments()->count() }} Student</li> --}}
+                                            <li>{{ $course->enrollments()->count() }} Student</li>
                                         </ul>
                                         <a class="author" href="#">
                                             <div class="img">

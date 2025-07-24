@@ -66,6 +66,11 @@ class User extends Authenticatable
         return $this->hasMany(Enrollment::class, 'user_id', 'id');
     }
 
+    function reviews(): HasMany
+    {
+        return $this->hasMany(Review::class, 'instructor_id', 'id');
+    }
+
     function gatewayInfo(): HasOne
     {
         return $this->hasOne(InstructorPayoutInformation::class, 'instructor_id', 'id');

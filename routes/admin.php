@@ -26,6 +26,7 @@ use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\PaymentSettingController;
 use App\Http\Controllers\Admin\PayoutGatewayController;
 use App\Http\Controllers\Admin\ProfileUpdateController;
+use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\VideoSectionController;
@@ -208,7 +209,7 @@ Route::group(["middleware" => "auth:admin", "prefix" => "admin", "as" => "admin.
     Route::resource('contact-setting', ContactSettingController::class);
 
     /** Review Routes */
-    // Route::resource('reviews', ReviewController::class);
+    Route::resource('reviews', ReviewController::class);
 
     /** Top bar routes */
     // Route::resource('top-bar', TopBarController::class);

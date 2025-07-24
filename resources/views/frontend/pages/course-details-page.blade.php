@@ -8,8 +8,8 @@
 @endpush
 @section('content')
     <!--===========================
-                    BREADCRUMB START
-                ============================-->
+                        BREADCRUMB START
+                    ============================-->
     <section class="wsus__breadcrumb course_details_breadcrumb"
         style="background: url({{ asset(config('settings.site_breadcrumb')) }});">
         <div class="wsus__breadcrumb_overlay">
@@ -18,14 +18,14 @@
                     <div class="col-12 wow fadeInUp">
                         <div class="wsus__breadcrumb_text">
                             <p class="rating">
-                                {{-- @for ($i = 1; $i <= 5; $i++)
+                                @for ($i = 1; $i <= 5; $i++)
                                     @if ($i <= $course->reviews()->avg('rating'))
                                         <i class="fas fa-star"></i>
                                     @else
                                         <i class="far fa-star"></i>
                                     @endif
                                 @endfor
-                                <span>({{ number_format($course->reviews()->avg('rating'), 2) ?? 0 }} Reviews)</span> --}}
+                                <span>({{ number_format($course->reviews()->avg('rating'), 2) ?? 0 }} Reviews)</span>
 
                             </p>
                             <h1>{{ $course->title }}</h1>
@@ -53,13 +53,13 @@
         </div>
     </section>
     <!--===========================
-                    BREADCRUMB END
-                ============================-->
+                        BREADCRUMB END
+                    ============================-->
 
 
     <!--===========================
-                    COURSES DETAILS START
-                ============================-->
+                        COURSES DETAILS START
+                    ============================-->
     <section class="wsus__courses_details pb_120 xs_pb_100">
         <div class="container">
             <div class="row">
@@ -163,13 +163,13 @@
                                                             ->courses()
                                                             ->pluck('id')
                                                             ->toArray();
-                                                        // $reviewsCount = \App\Models\Review::whereIn(
-                                                        //     'course_id',
-                                                        //     $coursesId,
-                                                        // )->count();
+                                                        $reviewsCount = \App\Models\Review::whereIn(
+                                                            'course_id',
+                                                            $coursesId,
+                                                        )->count();
                                                     @endphp
-                                                    {{-- <li><i class="fas fa-star"></i> <b> {{ $reviewsCount }} Reviews</b>
-                                                    </li> --}}
+                                                    <li><i class="fas fa-star"></i> <b> {{ $reviewsCount }} Reviews</b>
+                                                    </li>
                                                     <li><strong>4.7 Rating</strong></li>
                                                     <li>
                                                         <span><img
@@ -181,7 +181,7 @@
                                                         <span><img
                                                                 src="{{ asset('frontend/assets/images/user_icon_gray.png') }}"
                                                                 alt="user" class="img-fluid"></span>
-                                                        {{-- {{ $course->instructor->students()->count() }} Students --}}
+                                                        {{ $course->instructor->students()->count() }} Students
                                                     </li>
                                                 </ul>
 
@@ -226,14 +226,14 @@
                                     <div class="row align-items-center mb_50">
                                         <div class="col-xl-4 col-md-6">
                                             <div class="total_review">
-                                                {{-- <h2>{{ number_format($course->reviews()->avg('rating'), 2) ?? 0 }}</h2>
+                                                <h2>{{ number_format($course->reviews()->avg('rating'), 2) ?? 0 }}</h2>
                                                 <p>
                                                     @for ($i = 1; $i <= number_format($course->reviews()->avg('rating'), 2) ?? 0; $i++)
                                                         <i class="fas fa-star"></i>
                                                     @endfor
 
                                                 </p>
-                                                <h4>{{ $course->reviews()->count() }} Ratings</h4> --}}
+                                                <h4>{{ $course->reviews()->count() }} Ratings</h4>
                                             </div>
                                         </div>
                                         <div class="col-xl-8 col-md-6">
@@ -246,8 +246,8 @@
                                                         </div>
                                                         <span class="fill" data-percentage="85"></span>
                                                     </div>
-                                                    {{-- <span
-                                                        class="qnty">{{ $course->reviews()->where('rating', 5)->count() }}</span> --}}
+                                                    <span
+                                                        class="qnty">{{ $course->reviews()->where('rating', 5)->count() }}</span>
                                                 </div>
                                                 <div class="review_bar_single">
                                                     <p>4 <i class="fas fa-star"></i></p>
@@ -257,8 +257,8 @@
                                                         </div>
                                                         <span class="fill" data-percentage="70"></span>
                                                     </div>
-                                                    {{-- <span
-                                                        class="qnty">{{ $course->reviews()->where('rating', 4)->count() }}</span> --}}
+                                                    <span
+                                                        class="qnty">{{ $course->reviews()->where('rating', 4)->count() }}</span>
                                                 </div>
                                                 <div class="review_bar_single">
                                                     <p>3 <i class="fas fa-star"></i></p>
@@ -268,8 +268,8 @@
                                                         </div>
                                                         <span class="fill" data-percentage="50"></span>
                                                     </div>
-                                                    {{-- <span
-                                                        class="qnty">{{ $course->reviews()->where('rating', 3)->count() }}</span> --}}
+                                                    <span
+                                                        class="qnty">{{ $course->reviews()->where('rating', 3)->count() }}</span>
                                                 </div>
                                                 <div class="review_bar_single">
                                                     <p>2 <i class="fas fa-star"></i></p>
@@ -279,8 +279,8 @@
                                                         </div>
                                                         <span class="fill" data-percentage="30"></span>
                                                     </div>
-                                                    {{-- <span
-                                                        class="qnty">{{ $course->reviews()->where('rating', 2)->count() }}</span> --}}
+                                                    <span
+                                                        class="qnty">{{ $course->reviews()->where('rating', 2)->count() }}</span>
                                                 </div>
                                                 <div class="review_bar_single">
                                                     <p>1 <i class="fas fa-star"></i></p>
@@ -290,8 +290,8 @@
                                                         </div>
                                                         <span class="fill" data-percentage="10"></span>
                                                     </div>
-                                                    {{-- <span
-                                                        class="qnty">{{ $course->reviews()->where('rating', 1)->count() }}</span> --}}
+                                                    <span
+                                                        class="qnty">{{ $course->reviews()->where('rating', 1)->count() }}</span>
                                                 </div>
 
                                             </div>
@@ -299,7 +299,7 @@
                                     </div>
                                     <h3>Reviews</h3>
 
-                                    {{-- @foreach ($reviews as $review)
+                                    @foreach ($reviews as $review)
                                         <div class="wsus__course_single_reviews">
                                             <div class="wsus__single_review_img">
                                                 <img src="{{ asset($review->user->image) }}" alt="user"
@@ -322,7 +322,7 @@
 
                                     <div>
                                         {{ $reviews->links() }}
-                                    </div> --}}
+                                    </div>
 
                                 </div>
                                 @auth
@@ -333,7 +333,7 @@
                                         <div class="select_rating d-flex flex-wrap">Your Rating:
                                             <ul id="starRating" data-stars="5"></ul>
                                         </div>
-                                        {{-- <form action="{{ route('review.store') }}" method="POST">
+                                        <form action="{{ route('review.store') }}" method="POST">
                                             @csrf
                                             <div class="row">
                                                 <input type="hidden" name="rating" value="" id="rating">
@@ -345,7 +345,7 @@
                                                     <button type="submit" class="common_btn">Submit Now</button>
                                                 </div>
                                             </div>
-                                        </form> --}}
+                                        </form>
                                     </div>
                                 @else
                                     <div class="alert alert-info mt-3 text-center" role="alert">Please <a
@@ -402,7 +402,7 @@
                                                 alt="User" class="img-fluid"></span>
                                         Student Enrolled
                                     </p>
-                                    {{-- {{ $course->enrollments()->count() }} --}}
+                                    {{ $course->enrollments()->count() }}
                                 </li>
                                 <li>
                                     <p>
@@ -468,8 +468,8 @@
         </div>
     </section>
     <!--===========================
-                    COURSES DETAILS END
-                ============================-->
+                        COURSES DETAILS END
+                    ============================-->
 @endsection
 
 @push('scripts')

@@ -36,8 +36,8 @@ Route::group(['middleware' => ['auth:web', 'verified', 'check_role:student'], 'p
     Route::get('certificate/{course}/download', [CertificateController::class, 'download'])->name('certificate.download');
 
     /** Review Routes */
-    // Route::get('review', [StudentDashboardController::class, 'review'])->name('review.index');
-    // Route::delete('review/{id}', [StudentDashboardController::class, 'reviewDestroy'])->name('review.destroy');
+    Route::get('review', [StudentDashboardController::class, 'review'])->name('review.index');
+    Route::delete('review/{id}', [StudentDashboardController::class, 'reviewDestroy'])->name('review.destroy');
 
     Route::get('orders', [StudentOrderController::class, 'index'])->name('orders.index');
     Route::get('orders/{order}', [StudentOrderController::class, 'show'])->name('orders.show');

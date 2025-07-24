@@ -34,7 +34,7 @@
                                         <div class="rating_area">
                                             <!-- <a href="#" class="category">Design</a> -->
                                             <p class="rating">
-                                                {{-- @for($i = 1; $i <= 5; $i++)
+                                                @for($i = 1; $i <= 5; $i++)
                                                 @if($i <= $course->reviews()->avg('rating'))
                                                 <i class="fas fa-star"></i>
                                                 @else
@@ -43,7 +43,7 @@
 
                                                 @endfor
 
-                                                <span>({{ number_format($course?->reviews()->avg('rating'), 2) ?? 0 }} Rating)</span> --}}
+                                                <span>({{ number_format($course?->reviews()->avg('rating'), 2) ?? 0 }} Rating)</span>
                                             </p>
                                         </div>
 
