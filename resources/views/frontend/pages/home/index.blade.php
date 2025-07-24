@@ -4,7 +4,7 @@
     <!--===========================
             BANNER 3 START
         ============================-->
-    {{-- @include('frontend.pages.home.sections.hero-section') --}}
+    @include('frontend.pages.home.sections.hero-section')
     <!--===========================
             BANNER 3 END
         ============================-->
@@ -22,7 +22,7 @@
     <!--===========================
             ABOUT 3 START
         ============================-->
-    {{-- @include('frontend.pages.home.sections.about-section') --}}
+    @include('frontend.pages.home.sections.about-section')
     <!--===========================
             ABOUT 3 END
         ============================-->
@@ -31,7 +31,7 @@
     <!--===========================
             COURSES 3 START
         ============================-->
-    {{-- @include('frontend.pages.home.sections.courses-section') --}}
+    @include('frontend.pages.home.sections.courses-section')
     <!--===========================
             COURSES 3 END
         ============================-->
@@ -49,7 +49,7 @@
     <!--===========================
             BECOME INSTRUCTOR START
         ============================-->
-    {{-- @include('frontend.pages.home.sections.become-instructor-section') --}}
+    @include('frontend.pages.home.sections.become-instructor-section')
 
     <!--===========================
             BECOME INSTRUCTOR END
@@ -59,7 +59,7 @@
     <!--===========================
             VIDEO START
         ============================-->
-    {{-- @include('frontend.pages.home.sections.video-section') --}}
+    @include('frontend.pages.home.sections.video-section')
     <!--===========================
             VIDEO END
         ============================-->
@@ -68,7 +68,7 @@
     <!--===========================
             BRAND START
         ============================-->
-    {{-- @include('frontend.pages.home.sections.brand-section') --}}
+    @include('frontend.pages.home.sections.brand-section')
     <!--===========================
             BRAND END
         ============================-->
@@ -77,7 +77,7 @@
     <!--===========================
             QUALITY COURSES START
         ============================-->
-    {{-- @include('frontend.pages.home.sections.quality-course-section') --}}
+    @include('frontend.pages.home.sections.quality-course-section')
     <!--===========================
             QUALITY COURSES END
         ============================-->
@@ -86,7 +86,7 @@
     <!--===========================
             TESTIMONIAL START
         ============================-->
-    {{-- @include('frontend.pages.home.sections.testimonial-section') --}}
+    @include('frontend.pages.home.sections.testimonial-section')
 
     <!--===========================
             TESTIMONIAL END

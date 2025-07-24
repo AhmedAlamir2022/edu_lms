@@ -10,6 +10,19 @@
         </div>
         <div class="row">
             @foreach ($featuredCategories as $category)
+                @php
+                    // حساب عدد الدورات في التصنيف الرئيسي
+                    $mainCourses = $category->courses->count();
+
+                    // حساب عدد الدورات في كل التصنيفات الفرعية
+                    $subCourses = $category->subCategories->sum(function ($sub) {
+                        return $sub->courses->count();
+                    });
+
+                    // المجموع الكلي
+                    $totalCourses = $mainCourses + $subCourses;
+                @endphp
+
                 <div class="col-xxl-3 col-md-6 col-lg-4 wow fadeInUp">
                     <a href="{{ route('courses.index', ['main_category' => $category->slug]) }}"
                         class="wsus__single_category_4">
@@ -18,11 +31,12 @@
                         </div>
                         <div class="text">
                             <h4>{{ $category->name }}</h4>
-                            <p>{{ $category?->active_course_count }} Course</p>
+                            <p>{{ $totalCourses }} {{ Str::plural('Course', $totalCourses) }}</p>
                         </div>
                     </a>
                 </div>
             @endforeach
+
 
         </div>
 

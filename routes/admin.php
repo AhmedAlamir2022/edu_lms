@@ -4,6 +4,8 @@ use App\Http\Controllers\Admin\AboutUsSectionController;
 use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Admin\Auth\NewPasswordController;
+use App\Http\Controllers\Admin\BecomeInstructorSectionController;
+use App\Http\Controllers\Admin\BrandSectionController;
 use App\Http\Controllers\Admin\CertificateBuilderController;
 use App\Http\Controllers\Admin\CourseCategoryController;
 use App\Http\Controllers\Admin\CourseContentController;
@@ -13,6 +15,7 @@ use App\Http\Controllers\Admin\CourseLevelController;
 use App\Http\Controllers\Admin\CourseSubCategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FeatureController;
+use App\Http\Controllers\Admin\FeaturedInstructorController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\InstructorRequestController;
 use App\Http\Controllers\Admin\LatestCourseSectionController;
@@ -21,6 +24,8 @@ use App\Http\Controllers\Admin\PaymentSettingController;
 use App\Http\Controllers\Admin\PayoutGatewayController;
 use App\Http\Controllers\Admin\ProfileUpdateController;
 use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\Admin\VideoSectionController;
 use App\Http\Controllers\Admin\WithdrawRequestController;
 use Illuminate\Support\Facades\Route;
 
@@ -174,21 +179,21 @@ Route::group(["middleware" => "auth:admin", "prefix" => "admin", "as" => "admin.
     Route::resource('latest-courses-section', LatestCourseSectionController::class);
 
     /** Become Instructor Section Routes */
-    // Route::resource('become-instructor-section', BecomeInstructorSectionController::class);
+    Route::resource('become-instructor-section', BecomeInstructorSectionController::class);
 
     /** Video Section Routes */
-    // Route::resource('video-section', VideoSectionController::class);
+    Route::resource('video-section', VideoSectionController::class);
 
     /** Video Section Routes */
-    // Route::resource('brand-section', BrandSectionController::class);
+    Route::resource('brand-section', BrandSectionController::class);
 
     /** Featured Instructor Section Routes */
-    // Route::get('get-instructor-courses/{id}', [FeaturedInstructorController::class, 'getInstructorCourses'])->name('get-instructor-courses');
-    // Route::resource('featured-instructor-section', FeaturedInstructorController::class);
+    Route::get('get-instructor-courses/{id}', [FeaturedInstructorController::class, 'getInstructorCourses'])->name('get-instructor-courses');
+    Route::resource('featured-instructor-section', FeaturedInstructorController::class);
 
 
     /** Video Section Routes */
-    // Route::resource('testimonial-section', TestimonialController::class);
+    Route::resource('testimonial-section', TestimonialController::class);
 
     /** Counter Routes */
     // Route::resource('counter-section', CounterController::class);

@@ -414,39 +414,39 @@
                                 </a>
                             </div>
 
-                            {{-- <div class="dropdown-menu-column">
+                            <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.become-instructor-section.*']) }}"
                                     href="{{ route('admin.become-instructor-section.index') }}">
                                     Become Instructor Banner
                                 </a>
-                            </div> --}}
+                            </div>
 
-                            {{-- <div class="dropdown-menu-column">
+                            <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.video-section.*']) }} "
                                     href="{{ route('admin.video-section.index') }}">
                                     Video
                                 </a>
-                            </div> --}}
-                            {{-- <div class="dropdown-menu-column">
+                            </div>
+                            <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.brand-section.*']) }}"
                                     href="{{ route('admin.brand-section.index') }}">
                                     Brand
                                 </a>
-                            </div> --}}
+                            </div>
 
-                            {{-- <div class="dropdown-menu-column">
+                            <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.featured-instructor-section.*']) }}"
                                     href="{{ route('admin.featured-instructor-section.index') }}">
                                     Featured Instructor
                                 </a>
-                            </div> --}}
+                            </div>
 
-                            {{-- <div class="dropdown-menu-column">
+                            <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.testimonial-section.*']) }}"
                                     href="{{ route('admin.testimonial-section.index') }}">
                                     Testimonial
                                 </a>
-                            </div> --}}
+                            </div>
                             {{-- <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.counter-section.*']) }}"
                                     href="{{ route('admin.counter-section.index') }}">
@@ -555,6 +555,7 @@
                     </a>
                 </li> --}}
 
+                {{-- manage payment settings --}}
                 <li class="nav-item">
                     <a class="nav-link {{ sidebarItemActive(['admin.payment-setting.*']) }}"
                         href="{{ route('admin.payment-setting.index') }}">
@@ -568,6 +569,7 @@
                     </a>
                 </li>
 
+                {{-- manage settings --}}
                 <li class="nav-item ">
                     <a class="nav-link {{ sidebarItemActive(['admin.settings.*']) }}"
                         href="{{ route('admin.settings.index') }}">

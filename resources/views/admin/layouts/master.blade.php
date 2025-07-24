@@ -162,9 +162,18 @@
 
 
     <script>
+        // @if ($errors->any())
+        //     <div class = "alert alert-danger" >
+        //         <ul class = "mb-0" >
+        //             @foreach ($errors->all() as $error)
+        //                 <li > {{ $error }} < /li>
+        //             @endforeach
+        //         </ul>
+        //     </div >
+        // @endif
         @if ($errors->any())
             @foreach ($errors->all() as $error)
-                notyf()->error("{{ $error }}");
+                notyf() - > error("{{ $error }}");
             @endforeach
         @endif
     </script>

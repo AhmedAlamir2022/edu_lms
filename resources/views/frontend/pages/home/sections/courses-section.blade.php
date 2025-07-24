@@ -87,13 +87,13 @@
                                     <div class="wsus__single_courses_text_3">
                                         <div class="rating_area">
                                             <!-- <a href="#" class="category">Design</a> -->
-                                            <p class="rating">
+                                            {{-- <p class="rating">
                                                 @for ($i = 1; $i <= $course->reviews()->avg('rating'); $i++)
                                                     <i class="fas fa-star"></i>
                                                 @endfor
 
                                                 <span>({{ $course->reviews()->avg('rating') }} Rating)</span>
-                                            </p>
+                                            </p> --}}
                                         </div>
 
                                         <a class="title"
@@ -128,7 +128,7 @@
                     </div>
                     <div class="row mt_60 wow fadeInUp">
                         <div class="col-12 text-center">
-                            <a class="common_btn" href="#">Browse More Courses <i
+                            <a class="common_btn" href="{{ route('courses.index') }}">Browse More Courses <i
                                     class="far fa-angle-right"></i></a>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
                                         <div class="rating_area">
                                             <!-- <a href="#" class="category">Design</a> -->
                                             <p class="rating">
-                                                @for ($i = 1; $i <= 5; $i++)
+                                                {{-- @for ($i = 1; $i <= 5; $i++)
                                                     @if ($i <= $course->reviews()->avg('rating'))
                                                         <i class="fas fa-star"></i>
                                                     @else
@@ -161,7 +161,7 @@
                                                 @endfor
 
                                                 <span>({{ number_format($course->reviews()->avg('rating'), 2) ?? 0 }}
-                                                    Rating)</span>
+                                                    Rating)</span> --}}
                                             </p>
                                         </div>
 
@@ -197,7 +197,7 @@
                     </div>
                     <div class="row mt_60 wow fadeInUp">
                         <div class="col-12 text-center">
-                            <a class="common_btn" href="#">Browse More Courses <i
+                            <a class="common_btn" href="{{ route('courses.index') }}">Browse More Courses <i
                                     class="far fa-angle-right"></i></a>
                         </div>
                     </div>
@@ -262,7 +262,7 @@
                     </div>
                     <div class="row mt_60 wow fadeInUp">
                         <div class="col-12 text-center">
-                            <a class="common_btn" href="#">Browse More Courses <i
+                            <a class="common_btn" href="{{ route('courses.index') }}">Browse More Courses <i
                                     class="far fa-angle-right"></i></a>
                         </div>
                     </div>
@@ -327,7 +327,7 @@
                     </div>
                     <div class="row mt_60 wow fadeInUp">
                         <div class="col-12 text-center">
-                            <a class="common_btn" href="#">Browse More Courses <i
+                            <a class="common_btn" href="{{ route('courses.index') }}">Browse More Courses <i
                                     class="far fa-angle-right"></i></a>
                         </div>
                     </div>

@@ -27,26 +27,26 @@
                                 <div class="wsus__single_courses_3">
                                     <div class="wsus__single_courses_3_img">
                                         <img src="{{ asset($course?->thumbnail) }}" alt="Courses" class="img-fluid">
-                                        
+
                                         <span class="time"><i class="far fa-clock"></i> {{ convertMinutesToHours($course->duration) }}</span>
                                     </div>
                                     <div class="wsus__single_courses_text_3">
                                         <div class="rating_area">
                                             <!-- <a href="#" class="category">Design</a> -->
                                             <p class="rating">
-                                                @for($i = 1; $i <= 5; $i++)
+                                                {{-- @for($i = 1; $i <= 5; $i++)
                                                 @if($i <= $course->reviews()->avg('rating'))
                                                 <i class="fas fa-star"></i>
                                                 @else
                                                 <i class="far fa-star"></i>
-                                                @endif  
-                                                   
+                                                @endif
+
                                                 @endfor
-                                                
-                                                <span>({{ number_format($course?->reviews()->avg('rating'), 2) ?? 0 }} Rating)</span>
+
+                                                <span>({{ number_format($course?->reviews()->avg('rating'), 2) ?? 0 }} Rating)</span> --}}
                                             </p>
                                         </div>
-        
+
                                         <a class="title" href="{{ route('courses.show', $course?->slug) }}">{{ $course?->title }}</a>
                                         <ul>
                                             <li>{{ $course->lessons()->count() }} Lessons</li>
@@ -72,14 +72,14 @@
                                 </div>
                             </div>
 
-                            
+
                             @endforeach
-                           
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
     </div>
 </section>
