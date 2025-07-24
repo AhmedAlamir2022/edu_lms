@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\Auth\NewPasswordController;
 use App\Http\Controllers\Admin\BecomeInstructorSectionController;
 use App\Http\Controllers\Admin\BrandSectionController;
 use App\Http\Controllers\Admin\CertificateBuilderController;
+use App\Http\Controllers\Admin\CounterController;
 use App\Http\Controllers\Admin\CourseCategoryController;
 use App\Http\Controllers\Admin\CourseContentController;
 use App\Http\Controllers\Admin\CourseController;
@@ -196,7 +197,7 @@ Route::group(["middleware" => "auth:admin", "prefix" => "admin", "as" => "admin.
     Route::resource('testimonial-section', TestimonialController::class);
 
     /** Counter Routes */
-    // Route::resource('counter-section', CounterController::class);
+    Route::resource('counter-section', CounterController::class);
 
     /** Contact Routes */
     // Route::resource('contact', ContactController::class);

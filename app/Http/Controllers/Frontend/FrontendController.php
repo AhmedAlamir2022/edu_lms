@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\AboutUsSection;
 use App\Models\BecomeInstructorSection;
 use App\Models\Brand;
+use App\Models\Counter;
 use App\Models\Course;
 use App\Models\CourseCategory;
 use App\Models\Feature;
@@ -49,5 +50,15 @@ class FrontendController extends Controller
         //   $blogs = Blog::where('status', 1)->latest()->limit(3)->get();
 
         return view('frontend.pages.home.index', compact('featuredCategories', 'hero', 'feature', 'about', 'latestCourses', 'becomeInstructorBanner', 'video', 'brands', 'featuredInstructor', 'featuredInstructorCourses', 'testimonials'));
+    }
+
+    function about(): View
+    {
+        $about = AboutUsSection::first();
+        $counter = Counter::first();
+        $testimonials = Testimonial::all();
+        // $blogs = Blog::where('status', 1)->latest()->limit(8)->get();
+
+        return view('frontend.pages.about', compact('about', 'counter', 'testimonials'));
     }
 }

@@ -447,12 +447,12 @@
                                     Testimonial
                                 </a>
                             </div>
-                            {{-- <div class="dropdown-menu-column">
+                            <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.counter-section.*']) }}"
                                     href="{{ route('admin.counter-section.index') }}">
                                     Counter
                                 </a>
-                            </div> --}}
+                            </div>
 
                         </div>
                     </div>

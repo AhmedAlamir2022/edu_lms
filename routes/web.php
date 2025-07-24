@@ -35,7 +35,7 @@ Route::get('order-failed', [PaymentController::class, 'orderFailed'])->name('ord
 
 // Route::post('newsletter-subscribe', [FrontendController::class, 'subscribe'])->name('newsletter.subscribe');
 /** about route */
-// Route::get('about', [FrontendController::class, 'about'])->name('about.index');
+Route::get('about', [FrontendController::class, 'about'])->name('about.index');
 
 /** Contact route */
 // Route::get('contact', [FrontendContactController::class, 'index'])->name('contact.index');

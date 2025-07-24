@@ -80,9 +80,9 @@
                <li class="nav-item">
                    <a class="nav-link" href="{{ route('courses.index') }}">Courses</a>
                </li>
-               {{-- <li class="nav-item">
+               <li class="nav-item">
                    <a class="nav-link" href="{{ route('about.index') }}">About</a>
-               </li> --}}
+               </li>
                {{-- <li class="nav-item">
                    <a class="nav-link" href="{{ route('blog.index') }}">Blogs</a>
                </li> --}}
