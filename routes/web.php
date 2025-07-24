@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Frontend\BlogController;
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\CoursePageController;
@@ -49,9 +50,9 @@ Route::post('review', [CoursePageController::class, 'storeReview'])->name('revie
 Route::get('page/{slug}', [FrontendController::class, 'customPage'])->name('custom-page');
 
 /** Blog Routes */
-// Route::get('blog', [BlogController::class, 'index'])->name('blog.index');
-// Route::get('blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
-// Route::post('blog/comment/{id}', [BlogController::class, 'storeComment'])->name('blog.comment.store');
+Route::get('blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
+Route::post('blog/comment/{id}', [BlogController::class, 'storeComment'])->name('blog.comment.store');
 
 
 

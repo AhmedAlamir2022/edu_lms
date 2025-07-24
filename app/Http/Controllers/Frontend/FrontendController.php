@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\AboutUsSection;
 use App\Models\BecomeInstructorSection;
+use App\Models\Blog;
 use App\Models\Brand;
 use App\Models\Counter;
 use App\Models\Course;
@@ -48,9 +49,9 @@ class FrontendController extends Controller
         $featuredInstructor = FeaturedInstructor::first();
         $featuredInstructorCourses = Course::whereIn('id', json_decode($featuredInstructor?->featured_courses ?? '[]'))->get();
         $testimonials = Testimonial::all();
-        //   $blogs = Blog::where('status', 1)->latest()->limit(3)->get();
+        $blogs = Blog::where('status', 1)->latest()->limit(3)->get();
 
-        return view('frontend.pages.home.index', compact('featuredCategories', 'hero', 'feature', 'about', 'latestCourses', 'becomeInstructorBanner', 'video', 'brands', 'featuredInstructor', 'featuredInstructorCourses', 'testimonials'));
+        return view('frontend.pages.home.index', compact('featuredCategories', 'hero', 'feature', 'about', 'latestCourses', 'becomeInstructorBanner', 'video', 'brands', 'featuredInstructor', 'featuredInstructorCourses', 'testimonials', 'blogs'));
     }
 
     function about(): View
@@ -58,9 +59,9 @@ class FrontendController extends Controller
         $about = AboutUsSection::first();
         $counter = Counter::first();
         $testimonials = Testimonial::all();
-        // $blogs = Blog::where('status', 1)->latest()->limit(8)->get();
+        $blogs = Blog::where('status', 1)->latest()->limit(8)->get();
 
-        return view('frontend.pages.about', compact('about', 'counter', 'testimonials'));
+        return view('frontend.pages.about', compact('about', 'counter', 'testimonials', 'blogs'));
     }
 
     function customPage(string $slug): View

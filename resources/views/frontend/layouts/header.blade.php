@@ -1,7 +1,7 @@
    @php
        $topbar = \App\Models\TopBar::first();
        $categories = \App\Models\CourseCategory::whereNull('parent_id')->where('status', 1)->get();
-          $customPages = \App\Models\CustomPage::where('status', 1)->where('show_at_nav', 1)->get();
+       $customPages = \App\Models\CustomPage::where('status', 1)->where('show_at_nav', 1)->get();
    @endphp
    <!--===========================
         HEADER START
@@ -61,8 +61,11 @@
                            @if ($category->subCategories->count() > 0)
                                <ul class="category_sub_menu">
                                    @foreach ($category->subCategories as $subCategory)
-                                       <li><a
-                                               href="{{ route('courses.index', ['category' => $subCategory->id]) }}">{{ $subCategory->name }}</a>
+                                       <li><a href="{{ route('courses.index', ['category' => $subCategory->id]) }}">
+                                               <span>
+                                                   <img src="{{ asset($subCategory->image) }}" alt="Sub Category"
+                                                       class="img-fluid">
+                                               </span>{{ $subCategory->name }}</a>
                                        </li>
                                    @endforeach
 
@@ -83,9 +86,9 @@
                <li class="nav-item">
                    <a class="nav-link" href="{{ route('about.index') }}">About</a>
                </li>
-               {{-- <li class="nav-item">
+               <li class="nav-item">
                    <a class="nav-link" href="{{ route('blog.index') }}">Blogs</a>
-               </li> --}}
+               </li>
 
                <li class="nav-item">
                    <a class="nav-link" href="{{ route('contact.index') }}">contact us</a>
@@ -195,19 +198,19 @@
                                <li class="nav-item">
                                    <a class="nav-link" href="{{ route('about.index') }}">About</a>
                                </li>
-                               {{-- <li class="nav-item">
+                               <li class="nav-item">
                                    <a class="nav-link" href="{{ route('blog.index') }}">Blogs</a>
-                               </li> --}}
+                               </li>
 
                                <li class="nav-item">
                                    <a class="nav-link" href="{{ route('contact.index') }}">contact us</a>
                                </li>
-                               {{-- @foreach ($customPages as $page)
+                               @foreach ($customPages as $page)
                                    <li class="nav-item">
                                        <a class="nav-link"
                                            href="{{ route('custom-page', $page->slug) }}">{{ $page->title }}</a>
                                    </li>
-                               @endforeach --}}
+                               @endforeach
                            </ul>
                        </div>
                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"

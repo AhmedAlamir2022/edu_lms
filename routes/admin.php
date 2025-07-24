@@ -5,6 +5,9 @@ use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Admin\Auth\NewPasswordController;
 use App\Http\Controllers\Admin\BecomeInstructorSectionController;
+use App\Http\Controllers\Admin\BlogCategoryController;
+use App\Http\Controllers\Admin\BlogCommentController;
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\BrandSectionController;
 use App\Http\Controllers\Admin\CertificateBuilderController;
 use App\Http\Controllers\Admin\ContactController;
@@ -236,10 +239,13 @@ Route::group(["middleware" => "auth:admin", "prefix" => "admin", "as" => "admin.
     Route::resource('custom-page', CustomPageController::class);
 
     /** blog category routes */
-    // Route::resource('blog-categories', BlogCategoryController::class);
+    Route::resource('blog-categories', BlogCategoryController::class);
 
     /** blog routes */
-    // Route::resource('blogs', BlogController::class);
+    Route::resource('blogs', BlogController::class);
+
+    /** blog comments routes */
+    Route::resource('blog-comments', BlogCommentController::class);
 
 
     /** Database Clear Routes */

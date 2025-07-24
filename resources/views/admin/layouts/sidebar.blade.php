@@ -326,7 +326,7 @@
                     </a>
                 </li>
 
-                {{-- <li class="nav-item dropdown {{ sidebarItemActive(['admin.blogs.*', 'admin.blog-categories.*']) }}">
+                <li class="nav-item dropdown {{ sidebarItemActive(['admin.blogs.*', 'admin.blog-categories.*', 'admin.blog-comments.*']) }}">
                     <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown"
                         data-bs-auto-close="false" role="button" aria-expanded="false">
                         <span
@@ -343,7 +343,7 @@
                             <div class="dropdown-menu-column">
                                 <a class="dropdown-item {{ sidebarItemActive(['admin.blog-categories.*']) }}"
                                     href="{{ route('admin.blog-categories.index') }}">
-                                    Blog Categoires
+                                    Blog Categories
                                 </a>
 
                             </div>
@@ -358,8 +358,17 @@
                                 </a>
                             </div>
                         </div>
+
+                        <div class="dropdown-menu-columns">
+                            <div class="dropdown-menu-column">
+                                <a class="dropdown-item {{ sidebarItemActive(['admin.blog-comments.*']) }}"
+                                    href="{{ route('admin.blog-comments.index') }}">
+                                    Blog Comments
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </li> --}}
+                </li>
 
                 {{-- Payout Gateways --}}
                 <li class="nav-item {{ sidebarItemActive(['admin.payout-gateway.*']) }}">
@@ -549,6 +558,7 @@
                     </div>
                 </li>
 
+                {{-- Custom Page --}}
                 <li class="nav-item">
                     <a class="nav-link {{ sidebarItemActive(['admin.custom-page.*']) }}"
                         href="{{ route('admin.custom-page.index') }}">
