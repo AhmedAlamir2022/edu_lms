@@ -87,9 +87,9 @@
                    <a class="nav-link" href="{{ route('blog.index') }}">Blogs</a>
                </li> --}}
 
-               {{-- <li class="nav-item">
+               <li class="nav-item">
                    <a class="nav-link" href="{{ route('contact.index') }}">contact us</a>
-               </li> --}}
+               </li>
                {{-- @foreach ($customPages as $page)
                    <li class="nav-item">
                        <a class="nav-link" href="{{ route('custom-page', $page->slug) }}">{{ $page->title }}</a>
