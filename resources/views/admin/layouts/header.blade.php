@@ -43,7 +43,7 @@
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                     <a href="{{ route('admin.profile.index') }}" class="dropdown-item">Profile</a>
                     <div class="dropdown-divider"></div>
-                    <a href="./settings.html" class="dropdown-item">Settings</a>
+                    <a href="{{ route('admin.settings.index') }}" class="dropdown-item">Settings</a>
                     <a href="./sign-in.html"
                         onclick="event.preventDefault();
                                                 getElementById('logout').submit();"

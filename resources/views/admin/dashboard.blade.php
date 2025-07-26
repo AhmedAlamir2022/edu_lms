@@ -1,4 +1,3 @@
-
 @extends('admin.layouts.master')
 
 @section('content')
@@ -42,7 +41,7 @@
                                         </div>
                                         <div class="col">
                                             <div class="font-weight-medium">
-                                                <b>55</b>
+                                                <b>{{ config('settings.currency_icon') }}{{ $todaysOrder }}</b>
                                             </div>
                                             <div class="text-secondary">
                                                 Today's Orders
@@ -72,7 +71,7 @@
                                         </div>
                                         <div class="col">
                                             <div class="font-weight-medium">
-                                                <b>55</b>
+                                                <b>{{ config('settings.currency_icon') }}{{ $thisWeekOrders }}</b>
                                             </div>
                                             <div class="text-secondary">
                                                 This weeks Orders
@@ -102,7 +101,7 @@
                                         </div>
                                         <div class="col">
                                             <div class="font-weight-medium">
-                                                <b>55</b>
+                                                <b>{{ config('settings.currency_icon') }}{{ $thisMonthOrders }}</b>
                                             </div>
                                             <div class="text-secondary">
                                                 Monthly Orders
@@ -132,7 +131,7 @@
                                         </div>
                                         <div class="col">
                                             <div class="font-weight-medium">
-                                                <b>55</b>
+                                                <b>{{ config('settings.currency_icon') }}{{ $thisYearOrders }}</b>
                                             </div>
                                             <div class="text-secondary">
                                                 This Year's Orders
@@ -154,7 +153,7 @@
                                         </div>
                                         <div class="col">
                                             <div class="font-weight-medium">
-                                                <b>55</b>
+                                                <b>{{ $totalOrders }}</b>
                                             </div>
                                             <div class="text-secondary">
                                                 Total Orders
@@ -177,7 +176,7 @@
                                         </div>
                                         <div class="col">
                                             <div class="font-weight-medium">
-                                                <b>55</b>
+                                                <b>{{ $pendingCourses }}</b>
                                             </div>
                                             <div class="text-secondary">
                                                 Pending Courses
@@ -200,7 +199,7 @@
                                         </div>
                                         <div class="col">
                                             <div class="font-weight-medium">
-                                                <b>55</b>
+                                                <b>{{ $rejectedCourses }}</b>
                                             </div>
                                             <div class="text-secondary">
                                                 Rejected Courses
@@ -223,7 +222,7 @@
                                         </div>
                                         <div class="col">
                                             <div class="font-weight-medium">
-                                                <b>55</b>
+                                                <b>{{ $totalCourses }}</b>
                                             </div>
                                             <div class="text-secondary">
                                                 Total Courses
@@ -257,7 +256,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {{-- @foreach ($recentCourses as $course)
+                                        @foreach ($recentCourses as $course)
                                             <tr>
                                                 <td>
 
@@ -290,7 +289,7 @@
                                                 </td>
 
                                             </tr>
-                                        @endforeach --}}
+                                        @endforeach
 
                                     </tbody>
                                 </table>
@@ -312,7 +311,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {{-- @foreach ($recentBlogs as $blog)
+                                        @foreach ($recentBlogs as $blog)
                                             <tr>
                                                 <td>
 
@@ -343,7 +342,7 @@
                                                 </td>
 
                                             </tr>
-                                        @endforeach --}}
+                                        @endforeach
 
                                     </tbody>
                                 </table>
@@ -366,7 +365,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {{-- @foreach ($recentOrders as $order)
+                                        @foreach ($recentOrders as $order)
                                             <tr>
                                                 <td>
                                                     <a href="{{ route('admin.orders.show', $order->id) }}">
@@ -381,7 +380,7 @@
                                                 </td>
 
                                             </tr>
-                                        @endforeach --}}
+                                        @endforeach
 
                                     </tbody>
                                 </table>
@@ -408,7 +407,7 @@
                 labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 datasets: [{
                         label: 'Order Amount ({{ config('settings.currency_icon') }})',
-
+                        data: @json($monthlyOrderSums),
                         backgroundColor: 'rgba(0, 84, 166, 0.7)',
                         borderColor: 'rgb(0, 84, 166)',
                         borderWidth: 1,
@@ -416,7 +415,7 @@
                     },
                     {
                         label: 'Order Count',
-
+                        data: @json($monthlyOrderCounts),
                         backgroundColor: 'rgba(255, 99, 132, 0.6)',
                         borderColor: 'rgba(255, 99, 132, 1)',
                         type: 'line',
